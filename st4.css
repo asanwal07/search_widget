@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: rgb(13, 42, 87);
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  /* vh will automatically adjust the height according to browser */
+  /* The overflow property specifies what should happen if content overflows an element's box. */
+  /* align items center the items in the middle of the screen verticalyy(from the top) */
+  /* justify content center will  center the content in the middle of viewport. */
+}
+.search {
+  /* display: flex; */
+  position: relative;
+  margin: 0px;
+  /* border: 2px solid #fff; */
+  height: 30px;
+  width: 240px;
+}
+.input {
+  position: absolute;
+  border: none;
+  height: 50px;
+  width: 50px;
+  font-size: 14px;
+  background-color: white;
+  transition: width 0.3s ease;
+  font-size: 20px;
+  color: rgb(8, 105, 231);
+}
+.input:focus {
+  outline: none;
+}
+button:focus {
+  outline: none;
+}
+.search:focus {
+  flex: 0.2;
+}
+button {
+  background-color: white;
+  border: none;
+  position: absolute;
+  font-size: 20px;
+  /* top: 3px;
+  left: 204px; */
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+.search.active .input {
+  width: 230px;
+}
+.search.active .btn {
+  transform: translateX(200px);
+}
+.heading {
+  position: absolute;
+  top: -7px;
+  right: 17px;
+  color: yellow;
+}
